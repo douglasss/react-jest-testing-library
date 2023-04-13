@@ -12,6 +12,8 @@ export default function UserForm({ onUserAdd }: Props) {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     onUserAdd({ name, email });
+    setName('');
+    setEmail('');
   };
 
   return (
